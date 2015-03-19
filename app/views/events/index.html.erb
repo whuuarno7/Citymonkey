@@ -1,0 +1,27 @@
+
+
+<%= javascript_include_tag "Background"%>
+
+<div id="containerei" style="background-color: black;">
+  <div id="columns">
+    <% @event.each do |v|%>
+      <div class="pin">
+        <p style="display: none;" class="backgroundei" > <%=v.background.url%> </p>
+             <div class="titleei"><%= v.title %></div>
+                <% if v.datestart == v.dateend %> 
+                  <div class="dateei"> <%= v.datestart.strftime("%B, %d de %Y" ) %> </div>
+                   <%else%>
+                    <div class="dateei"> <%= v.datestart.strftime("%B, %d" ) %> hasta <%= v.dateend.strftime("%B, %d de %Y" ) %> </div>
+                      <%end%>
+                      <% if v.hourstart == v.hourend %> 
+                    <div class="hourei"> Hora: </br> <%= v.hourstart.strftime("I:%M %p") %> </div>
+                    <%else%>
+                    <div class="hourei"> Hora: </br> <%= v.hourstart.strftime("%I:%M %p")   %> -
+                      <%= v.hourend.strftime("%I:%M %p") %> 
+                    </div><br>
+                <%end%>
+             </div>
+          <%end%>
+  </div>
+</div> 
+
