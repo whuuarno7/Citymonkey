@@ -12,13 +12,7 @@ class MigracionDeCambios < ActiveRecord::Migration
      end
 
 
-     change_column :events, :datestart, :date
-     change_column :events, :dateend, :date
-     change_column :events, :hourstart, :datetime
-     change_column :events, :hourend, :datetime
-     change_column :events, :hourend, :datetime
-     change_column :agendas, :hourend, :datetime
-     change_column :agendas, :hourend, :datetime
+  
      add_column :events, :website, :string
      add_column :events, :city, :string
      add_column :events, :whybuy, :string

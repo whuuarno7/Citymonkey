@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(version: 20150316220354) do
 
   create_table "agendas", force: :cascade do |t|
-    t.datetime "hourend"
+    t.integer  "hourend"
     t.integer  "hourstart"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -41,10 +41,10 @@ ActiveRecord::Schema.define(version: 20150316220354) do
   create_table "events", force: :cascade do |t|
     t.string   "title"
     t.string   "description"
-    t.date     "datestart"
-    t.date     "dateend"
-    t.datetime "hourstart"
-    t.datetime "hourend"
+    t.integer  "datestart"
+    t.integer  "dateend"
+    t.integer  "hourstart"
+    t.integer  "hourend"
     t.integer  "price"
     t.string   "wherebuy"
     t.datetime "created_at",              null: false
