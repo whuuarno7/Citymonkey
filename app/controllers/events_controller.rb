@@ -18,9 +18,9 @@ class EventsController < ApplicationController
   end
 
   def create
-    puts "params >> #{events_params.inspect}"
+    #puts "params >> #{events_params.inspect}"
       @event = Event.new(events_params)
-    puts "event >> #{@event.inspect}"
+    #puts "event >> #{@event.inspect}"
 
     if @event.save
         redirect_to  events_path, notice: 'evento almacenado'
