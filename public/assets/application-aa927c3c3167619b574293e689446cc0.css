@@ -1,24 +1,539 @@
-@charset "UTF-8";/* line 5, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/events.scss */
-#background {
-  background-color: black;
-  height: 640px;
-  width: 3000px;
+@charset "UTF-8";/* line 1, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+------------------------------index Desing--------------------
+#containerei {
+  width: 90%;
+  max-width: 1100px;
+  min-width: 800px;
+  margin: 50px auto;
 }
 
-/* line 12, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/events.scss */
-#surfbar {
-  background-color: #fff;
-  color: red;
-  height: 25px;
-  margin-top: 20px;
-  width: 1400px;
+/* line 11, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+#columns {
+  padding-top: 5%;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 10px;
+  -webkit-column-fill: auto;
+  -moz-column-count: 3;
+  -moz-column-gap: 10px;
+  -moz-column-fill: auto;
+  -webkit-column-count: 3;
+     -moz-column-count: 3;
+          column-count: 3;
+  -webkit-column-gap: 15px;
+     -moz-column-gap: 15px;
+          column-gap: 15px;
+  -webkit-column-fill: balance;
+     -moz-column-fill: balance;
+          column-fill: balance;
+  width: 98%;
+  margin-left: 1%;
+  background-color: black;
 }
-/* line 7, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+
+/* line 28, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+.pin {
+  display: inline-block;
+  border: 2px solid #FAFAFA;
+  box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+  margin: 0 2px 15px;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  column-break-inside: avoid;
+  padding: 15px;
+  padding-bottom: 5px;
+  background: -webkit-linear-gradient(45deg, #FFF, #F9F9F9);
+  opacity: 1;
+  width: 100%;
+  background-size: cover;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  border-radius: 8px;
+}
+
+/* line 50, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+#barrainfo {
+  width: 100%;
+  height: auto;
+  position: absolute;
+}
+
+/* line 56, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+#pin p {
+  font: 1.5rem Arial, sans-serif;
+  color: white;
+  margin: 0;
+}
+
+@media (min-width: 960px) {
+  /* line 65, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+  #columns {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+  }
+}
+@media (min-width: 1100px) {
+  /* line 73, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+  #columns {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+  }
+}
+/* line 80, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+#columns:hover .pin:not(:hover) {
+  opacity: 0.6;
+}
+
+/* line 85, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+.background_imagediv {
+  width: 100%;
+  background-size: cover;
+  display: inline-block;
+}
+
+/* line 96, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+#events h2 {
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+}
+
+/* line 108, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+.titleei {
+  color: #FFF;
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 25%;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+}
+
+/* line 118, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+.titleei:hover {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  color: black;
+}
+
+/* line 125, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+.dateei {
+  font-size: 1.5rem;
+  color: white;
+  background-color: rgba(8, 7, 7, 0.49);
+  border-radius: 4px;
+  margin-top: 2px;
+  font-family: Lato, b;
+  text-align: center;
+}
+
+/* line 135, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+.hourei {
+  font-size: 1.2rem;
+  color: white;
+  background-color: rgba(8, 7, 7, 0.49);
+  border-radius: 4px;
+  margin-top: 2px;
+  font-family: Lato,b;
+}
+
+/* line 145, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+#events h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  color: white;
+}
+
+/* line 159, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+#roweve {
+  margin-top: 5%;
+  background-color: red;
+}
+
+/* line 173, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+#newevent {
+  width: 100%;
+  height: 100%;
+  background-color: #FFCC33;
+  color: black;
+  background-size: cover;
+  margin-top: 6%;
+}
+
+/* line 193, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+#julie {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* line 209, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+#divnewevent {
+  width: 40%;
+  height: auto;
+  margin-left: 30%;
+  padding-top: 1%;
+}
+
+/* line 227, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+#container-fluid-event {
+  background-color: orange;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 243, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+#column {
+  margin-top: 5%;
+}
+
+/* line 253, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+.lateral {
+  background-color: rgba(0, 0, 0, 0.78);
+  width: 80%;
+  height: 70%;
+  opacity: 0.5%;
+  margin: auto;
+}
+
+/* line 271, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+.rigth {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.78);
+  margin-right: 5%;
+}
+
+/* line 287, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+#lcenter {
+  position: relative;
+  margin-right: 5%;
+}
+
+/* line 297, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+#titulo {
+  color: white;
+  font-size: 2.5rem;
+  text-align: center;
+  padding-top: 5%;
+  width: 80%;
+  margin-left: 10%;
+  font-family: 'Lato', b;
+}
+
+/* line 319, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+#imgprofile {
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  overflow: hidden;
+  vertical-align: middle;
+  display: table-cell;
+  display: inherit;
+  margin-left: 25%;
+}
+
+/* line 347, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+#photoprofile {
+  width: 110%;
+  height: 110%;
+  margin-left: -5%;
+}
+
+/* line 363, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+#date {
+  font-size: 1.6rem;
+  text-align: center;
+  color: white;
+  font-family: 'Lato', bold;
+}
+
+/* line 377, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+#hour {
+  font-size: 1.4rem;
+  text-align: center;
+  color: white;
+  font-family: 'Lato', ligth;
+}
+
+/* line 391, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+#infoevent {
+  font-size: 1.2rem;
+  text-align: center;
+  color: white;
+  font-family: 'Lato', ligth;
+}
+
+/* line 419, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+#rigthbottom {
+  margin-top: 1%;
+  z-index: 1;
+  background: transparent;
+}
+
+/* line 431, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+#rigthcenter {
+  padding-top: 3%;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  vertical-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 250px;
+}
+
+/* line 453, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+#rigthtop {
+  padding-top: 5%;
+  z-index: 3;
+  background-color: transparent;
+}
+
+/* line 469, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+#lleft {
+  position: relative;
+  width: 100%;
+  background-color: transparent;
+}
+
+/* line 481, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+.gamifications img {
+  width: 60%;
+  height: auto;
+  margin: 20%;
+  display: inline-block;
+}
+
+/* line 493, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+.gamifications h2 {
+  font-size: 1rem;
+  font-family: 'Lato', ligth;
+  color: white;
+  text-align: center;
+  margin-top: -10%;
+}
+
+/* line 511, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+.gamifications {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* line 523, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+#lrigth {
+  position: relative;
+}
+
+/* line 539, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+#scores img {
+  width: 60%;
+  height: auto;
+  margin: 20%;
+  display: inline;
+}
+
+/* line 557, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+#container-subrigth {
+  background-color: transparent;
+  margin-top: 1%;
+}
+
+/* line 567, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+#description {
+  text-align: center;
+  font-size: 1.5rem;
+  /*background-color: rgba(0, 0, 0, 0.78);*/
+  padding-top: 3%;
+  width: 100%;
+  font-family: 'Lato', ligth;
+  color: white;
+  vertical-align: middle;
+}
+
+/* line 591, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+#scores h2 {
+  font-family: 'Lato', ligth;
+  color: white;
+  text-align: center;
+  margin-top: -10%;
+  font-size: 1.2rem;
+}
+
+/* line 611, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+#scores {
+  background-color: rgba(0, 0, 0, 0.78);
+}
+
+/* line 621, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+#moreinfo {
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  color: white;
+  width: 95%;
+  margin-left: 4%;
+  margin-top: 1%;
+}
+
+/* line 639, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+#moreinfo h1 {
+  font-size: 2.5rem;
+  font-family: 'Lato', bold;
+}
+
+/* line 649, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+#info {
+  background-color: transparent;
+}
+
+/* line 657, /home/whuuarno/Escritorio/Cityfolkwth/app/assets/stylesheets/events.scss */
+#moreinfoinner {
+  width: 100%;
+  height: 100px;
+}
+/* line 2, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/users.scss */
+#background_row_pu {
+  background-size: cover;
+  background-repeat: none;
+}
+
+/* line 10, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/users.scss */
+h1 {
+  font-family: "lato";
+}
+
+/* line 16, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/users.scss */
+p {
+  text-align: 'center';
+  font-family: "lato";
+}
+
+/* line 23, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/users.scss */
+.media-object {
+  margin-left: 23%;
+}
+
+/* line 29, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/users.scss */
+#primera {
+  width: 10%;
+  float: left;
+  margin-top: 35%;
+  font-family: 'lato';
+  margin-right: -25px;
+}
+
+/* line 38, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/users.scss */
+#segunda {
+  width: 45%;
+  float: left;
+  margin-top: 5%;
+}
+
+/* line 44, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/users.scss */
+#tercera {
+  width: 45%;
+  float: left;
+  margin-top: 5%;
+}
+
+/* line 52, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/users.scss */
+#container2 {
+  padding-left: 30px;
+}
+
+/* line 57, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/users.scss */
+.col-md-3 {
+  background-color: grey;
+}
+
+/* line 65, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/users.scss */
+.col-md-4 {
+  background-color: grey;
+}
+
+/* line 73, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/users.scss */
+.container-fluid {
+  background-color: white;
+}
+
+/* line 78, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/users.scss */
+#bkgndsignin {
+  width: 100%;
+  height: 100%;
+  background-image: url(s3-sa-east-1.amazonaws.com/cityfolkwtm/Dise%C3%B1os+welcome/login/backgroundlogin.png) no-repeat fixed;
+  background-size: cover;
+}
+
+/* line 85, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/users.scss */
+#bkgndsignup {
+  width: 100%;
+  height: 100%;
+  background: url(s3-sa-east-1.amazonaws.com/cityfolkwtm/Dise%C3%B1os+welcome/login/backgroundsignup.png) no-repeat fixed;
+  background-size: cover;
+}
+
+/* line 93, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/users.scss */
+.rowsignin {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* line 99, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/users.scss */
+#signupPage {
+  width: 30%;
+  height: auto;
+  float: right;
+  padding-top: 5%;
+  margin-left: 35%;
+  font-family: "Lato", sans-serinf;
+  color: white;
+  position: absolute;
+}
+
+/* line 111, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/users.scss */
+#signinPage {
+  width: 30%;
+  height: auto;
+  float: right;
+  padding-top: 15%;
+  margin-left: 35%;
+  font-family: "Lato", sans-serinf;
+  color: white;
+  position: absolute;
+}
+/* line 9, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
+.notice {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #ECECEC;
+  padding: 15px;
+  border: 1px solid #F3EAEA;
+  border-radius: 5px;
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  text-align: center;
+}
+
+/* line 22, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
+.notice-alert {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #ECECEC;
+  padding: 15px;
+  border: 1px solid #F3EAEA;
+  border-radius: 5px;
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  text-align: center;
+}
+
+/* line 41, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 span {
   text-decoration: none;
 }
 
-/* line 13, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 47, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 #navbar {
   width: 91%;
   height: 20%;
@@ -27,7 +542,7 @@ span {
   float: right;
 }
 
-/* line 23, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 57, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 #menu {
   width: 4%;
   height: 4%;
@@ -36,7 +551,7 @@ span {
   margin-left: 3%;
 }
 
-/* line 31, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 65, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 #inv {
   margin-left: 0.5%;
   margin-top: 0.4%;
@@ -46,7 +561,7 @@ span {
   background-color: white;
 }
 
-/* line 44, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 78, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 #signup {
   margin-right: 2%;
   margin-top: 0.4%;
@@ -56,7 +571,7 @@ span {
   font-decoration: none;
 }
 
-/* line 53, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 87, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 #signin {
   margin-right: 5%;
   margin-top: 0.4%;
@@ -67,7 +582,7 @@ span {
   display: inline;
 }
 
-/* line 65, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 99, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 #inv:hover {
   margin-left: 0.5%;
   margin-top: 0.4%;
@@ -77,19 +592,19 @@ span {
   color: white;
 }
 
-/* line 74, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 108, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 #signin:hover {
   background-color: black;
   color: white;
 }
 
-/* line 79, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 113, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 #signup:hover {
   background-color: black;
   color: white;
 }
 
-/* line 84, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 118, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 #videobox {
   background-color: black;
   width: 100%;
@@ -97,7 +612,7 @@ span {
   z-index: 1;
 }
 
-/* line 92, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 126, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 video {
   right: 0;
   bottom: 0;
@@ -112,7 +627,7 @@ video {
   position: relative;
 }
 
-/* line 110, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 144, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 #imagw {
   height: auto;
   width: 20%;
@@ -122,14 +637,14 @@ video {
   z-index: 1;
 }
 
-/* line 125, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 159, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 #w {
   box-sizing: border-box;
   position: relative;
   z-index: -100;
 }
 
-/* line 132, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 166, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 #frame {
   z-index: 2;
   bottom: -20%;
@@ -141,7 +656,7 @@ video {
   height: 20%;
 }
 
-/* line 146, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 180, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 #container-fluid {
   padding: 0%;
   margin: 0%;
@@ -149,14 +664,14 @@ video {
   background-color: black;
 }
 
-/* line 153, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 187, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 #grid {
   background-color: black;
   width: 100%;
   height: auto;
 }
 
-/* line 158, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 192, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 ul.rig.columns-3 {
   list-style: none;
   font-size: 0px;
@@ -167,7 +682,7 @@ ul.rig.columns-3 {
   margin-left: 6%;
 }
 
-/* line 167, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 201, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 ul.rig li {
   display: inline-block;
   background: black;
@@ -177,21 +692,21 @@ ul.rig li {
   -webkit-box-sizing: border-box;
 }
 
-/* line 175, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 209, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 ul.rig li img {
   max-width: 100%;
   height: auto;
   z-index: 1;
 }
 
-/* line 181, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 215, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 ul.rig.columns-3 li {
   width: 30.83%;
   /* this value + 2.5 should = 33% */
   position: relative;
 }
 
-/* line 185, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 219, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 ul.rig.columns-3 div {
   position: absolute;
   bottom: 20%;
@@ -204,7 +719,7 @@ ul.rig.columns-3 div {
   font-size: 100%;
 }
 
-/* line 199, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 233, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 ul.rig.columns-3 p {
   font-size: 1.5rem;
   text-align: center;
@@ -212,43 +727,43 @@ ul.rig.columns-3 p {
   font-family: 'Lato', ligth;
 }
 
-/* line 207, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 241, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 #musica:hover div {
   display: block;
 }
 
-/* line 211, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 245, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 #arte:hover div {
   display: block;
 }
 
-/* line 216, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 250, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 #danza:hover div {
   display: block;
 }
 
-/* line 223, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 257, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 #teatro:hover div {
   display: block;
 }
 
-/* line 230, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 264, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 #cc:hover div {
   display: block;
 }
 
-/* line 236, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 270, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 #arquitectura:hover div {
   display: block;
 }
 
-/* line 241, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 275, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 .row {
   background-color: white;
   font-size: 100%;
 }
 
-/* line 246, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 280, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 #title {
   float: right;
   margin-right: 10%;
@@ -259,7 +774,7 @@ ul.rig.columns-3 p {
   float: left;
 }
 
-/* line 257, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 291, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 #text {
   float: right;
   margin-top: 3%;
@@ -269,12 +784,12 @@ ul.rig.columns-3 p {
   font-family: 'Questrial', sans-serif;
 }
 
-/* line 266, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 300, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 #text span {
   font-size: 1.2 em;
 }
 
-/* line 272, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 306, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 #marimonda {
   margin-left: 5%;
   margin-top: 10%;
@@ -284,28 +799,33 @@ ul.rig.columns-3 p {
   padding-bottom: 10%;
 }
 
-/* line 282, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 317, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
+#guru {
+  background-color: white;
+}
+
+/* line 327, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 #claps {
   margin-left: 42%;
   font-size: 3rem;
   font-family: 'Lato', bold;
 }
 
-/* line 289, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 334, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 #galeria {
   margin-left: 38%;
   font-size: 3rem;
   font-family: 'Lato', bold;
 }
 
-/* line 296, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 341, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 #bites {
   margin-left: 45%;
   font-size: 3rem;
   font-family: 'Lato', bold;
 }
 
-/* line 303, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 348, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 .description {
   font-size: 2rem;
   color: black;
@@ -314,14 +834,14 @@ ul.rig.columns-3 p {
   text-align: center;
 }
 
-/* line 312, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 357, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 .circles {
   float: right;
   margin-right: 20%;
   padding-top: 5%;
 }
 
-/* line 319, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 364, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 #phrase {
   width: 100%;
   height: auto;
@@ -331,13 +851,13 @@ ul.rig.columns-3 p {
   color: rgba(0, 0, 0, 0.88);
 }
 
-/* line 330, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 375, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 #phrase img {
   width: 100%;
   height: auto;
 }
 
-/* line 336, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 381, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 #piggy {
   float: left;
   margin-left: 30%;
@@ -345,15 +865,15 @@ ul.rig.columns-3 p {
   padding-top: 15%;
 }
 
-/* line 347, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 392, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 #rr {
   float: right;
-  margin-right: 25%;
+  margin-right: 30%;
   display: inline-block;
-  padding-top: 15%;
+  padding-top: 1%;
 }
 
-/* line 354, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 400, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 #piggyf {
   width: 100%;
   height: auto;
@@ -366,7 +886,7 @@ ul.rig.columns-3 p {
   margin-top: 23%;
 }
 
-/* line 368, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 414, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 #rrf {
   float: left;
   display: inline-block;
@@ -380,30 +900,30 @@ ul.rig.columns-3 p {
   padding-bottom: 15%;
 }
 
-/* line 383, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 429, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 h2.introduccion {
   font-size: 49px;
   text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* line 388, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 434, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 .marker {
   color: #ddd;
   padding: 60px;
   text-align: center;
 }
 
-/* line 394, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 440, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 .marker h2 {
   font-size: 4em;
 }
 
-/* line 398, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 444, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 .marker p {
   font-size: 1.8em;
 }
 
-/* line 403, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 449, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 #bloque1 {
   background-color: #000000;
   margin: 0 auto;
@@ -411,7 +931,7 @@ h2.introduccion {
   position: static;
 }
 
-/* line 410, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 456, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 #bloque2 {
   background-color: #000000;
   margin: 0 auto;
@@ -419,7 +939,7 @@ h2.introduccion {
   color: #fff;
 }
 
-/* line 417, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 463, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 #backphoto1 {
   background: url(https://s3-sa-east-1.amazonaws.com/cityfolkwtm/Dise%C3%B1os+welcome/backphotos/backphoto1.jpg) no-repeat fixed;
   background-size: cover;
@@ -429,7 +949,7 @@ h2.introduccion {
   min-height: 50%;
 }
 
-/* line 426, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 472, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 #backphoto2 {
   background: url(https://s3-sa-east-1.amazonaws.com/cityfolkwtm/Dise%C3%B1os+welcome/backphotos/backphoto2.jpg) no-repeat fixed;
   background-size: cover;
@@ -439,7 +959,7 @@ h2.introduccion {
   min-height: 50%;
 }
 
-/* line 436, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 482, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 #backphoto3 {
   background: url(https://s3-sa-east-1.amazonaws.com/cityfolkwtm/Dise%C3%B1os+welcome/backphotos/backphoto3.jpg) no-repeat fixed;
   background-size: cover;
@@ -449,7 +969,7 @@ h2.introduccion {
   min-height: 50%;
 }
 
-/* line 444, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/welcome.scss */
+/* line 490, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/welcome.scss */
 #backphoto4 {
   background: url(https://s3-sa-east-1.amazonaws.com/cityfolkwtm/Dise%C3%B1os+welcome/backphotos/backphoto4.jpg) no-repeat fixed;
   background-size: cover;
@@ -8450,14 +8970,14 @@ button.close {
     display: none !important;
   }
 }
-/* line 23, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/application.scss */
+/* line 23, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/application.scss */
 .img-responsive {
   display: block;
   height: auto;
   max-width: 100%;
 }
 
-/* line 29, C:/Users/USUARIO/Desktop/cityfolkwtm/app/assets/stylesheets/application.scss */
+/* line 29, C:/Users/USUARIO/Desktop/CityMonkey/app/assets/stylesheets/application.scss */
 #W {
   box-sizing: border-box;
   position: relative;

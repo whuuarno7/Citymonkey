@@ -75,23 +75,17 @@ font-family: 'lato' ;
    background-color: white;
 }
 
-
-
-
- 
-
- 
 #bkgndsignin{
 	width:100%;
 	height:100%;
-	background: url(https://s3-sa-east-1.amazonaws.com/cityfolkwtm/Dise%C3%B1os+welcome/login/backgroundlogin.jpg) no-repeat fixed;
+	background-image: url(s3-sa-east-1.amazonaws.com/cityfolkwtm/Dise%C3%B1os+welcome/login/backgroundlogin.png) no-repeat fixed;
 	background-size: cover;
 }
 
 #bkgndsignup{
 	width:100%;
 	height:100%;
-	background: url(https://s3-sa-east-1.amazonaws.com/cityfolkwtm/Dise%C3%B1os+welcome/login/backgroundsignup.jpg) no-repeat fixed;
+	background: url(s3-sa-east-1.amazonaws.com/cityfolkwtm/Dise%C3%B1os+welcome/login/backgroundsignup.png) no-repeat fixed;
 	background-size: cover;
 }
 

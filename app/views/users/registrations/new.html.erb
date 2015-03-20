@@ -1,51 +1,70 @@
-<h2>Registrate</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+  <title>Registrate</title>
 
-  <div class="field"> 
-    <%= f.label :name %> <br />
-    <%= f.text_field :name, autofocus: true %>
-  </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+    <body id="bkgndsignup">
+      <div id="rowsignup" class="container-fluid">
+        <div  class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12  ">
 
-  <div>
-    <%= f.check_box :sexo, {}, true %> 
-    <%= f.label :woman, "Mujer" %> 
-  </div>
-  <div><%= f.check_box :sexo, {}, true %>
-    <%= f.label :man, "Hombre" %> 
-  </div>
-  <div>
-    <%= f.check_box :sexo, {}, true %>
-    <%= f.label :intersex, "Intersex" %> 
-  </div>
+            
+              <div >
+                    <div id="signupPage" class="form-group">
+                    
+                        <h2> <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Registrate</h2> 
 
-  <div>
-    <%= f.label :borndate %><br />
-    <%= f.date_select :borndate %>
-  </div>
+                        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                          <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @validatable %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+                          <div class="field"> 
+                            <%= f.label :name %> <br />
+                            <%= f.text_field :name, class:"form-control", placeholder:"Nombre", autofocus: true %>
+                          </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
+                          <div class="field">
+                            <%= f.label :email %><br />
+                            <%= f.email_field :email, class:"form-control", placeholder:"email", autofocus: true %>
+                          </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+                          <div class="field">
+                            <%= f.label :sexo %><br />
+                         
 
-<%= render "users/shared/links" %>
+                          <%= f.select :sexo, options_for_select(["hombre", "mujer", "intersexual"]), class:"form-control", autofocus: true %><br />
+                          </div>
+                          
+                          <div class="field">
+                            <%= f.label :borndate%><br />
+                            <%= f.date_select :borndate, class:"form-control", placeholder:"Fecha de apertura o día del evento", autofocus: true %> 
+                          </div>
+                          
+
+                          <div class="field">
+                            <%= f.label :password %>
+                            <% if @validatable %>
+                            <em>(<%= @minimum_password_length %> caracteres mínimos)</em>
+                            <% end %><br />
+                            <%= f.password_field :password, autocomplete: "off",class:"form-control", placeholder:"Inserte contraseña", autofocus: true %>
+                          </div>
+
+                          <div class="field">
+                            <%= f.label :password_confirmation %><br />
+                            <%= f.password_field :password_confirmation, autocomplete: "off", class:"form-control", placeholder: "Repita la contraseña", autofocus: true %>
+                          </div>
+
+                          <div class="actions"> <br />
+                            <%= f.submit "Registrarse", class:"btn btn-default" %>
+                          </div>
+
+                        <% end %>
+
+                        <%= render "users/shared/links" %>
+                </div>                  
+             </div>
+       
+        </div>
+      </div>
+  </div>
+    
+    </body>
+

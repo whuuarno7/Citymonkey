@@ -25,17 +25,26 @@
 
       </div>
       <div class="col-xs-12 col-sm-4 col-md-4">
+        <div class="field">
           <%= f.label :bibliography, "Una pequeña reseña sobre ti" %><br /> 
-          <%= f.text_field :bibliography %><br />        
+          <%= f.text_field :bibliography %><br /> 
+        </div>
+        <div class="field">       
           <%= f.label :borndate,"Fecha de nacimiento" %><br /> 
           <%= f.date_select :borndate %><br /> 
           <%= f.label :locationborn, "Ciudad de nacimiento" %><br /> 
+        </div>
+        <div class="field">
           <%= f.text_field :locationborn %><br /> 
           <%= f.label :location, "Ciudad Actual" %><br /> 
+        </div>
+
+        <div class="field">
           <%= f.text_field :location %><br /> 
           <%= f.label :website, "Tu website de contacto" %><br /><%= f.text_field :website %><br /> 
+        </div>
       
-            </div>
+        </div>
       <div class="col-xs-12 col-sm-4 col-md-4">
         <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
