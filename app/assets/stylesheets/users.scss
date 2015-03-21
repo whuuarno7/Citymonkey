@@ -62,35 +62,58 @@ font-family: 'lato' ;
 
 }
 
-.col-md-4 {
+//.col-md-4 {
 
-   background-color: grey;
+  // background-color: grey;
 
 
 
+//}
+
+#fluidsu {
+
+   background-color: transparent;
+   overflow: hidden;
 }
 
-.container-fluid {
+#fluidedit {
 
-   background-color: white;
+   background-color: transparent;
+   overflow: hidden;
+   color: white;
+   margin-top: 5%;
 }
 
 #bkgndsignin{
 	width:100%;
 	height:100%;
-	background-image: url(s3-sa-east-1.amazonaws.com/cityfolkwtm/Dise%C3%B1os+welcome/login/backgroundlogin.png) no-repeat fixed;
+	background: url(http://s3-sa-east-1.amazonaws.com/cityfolkwtm/Dise%C3%B1os+welcome/login/backgroundlogin.png) no-repeat fixed;
 	background-size: cover;
+
 }
 
 #bkgndsignup{
 	width:100%;
 	height:100%;
-	background: url(s3-sa-east-1.amazonaws.com/cityfolkwtm/Dise%C3%B1os+welcome/login/backgroundsignup.png) no-repeat fixed;
+	background: url(http://s3-sa-east-1.amazonaws.com/cityfolkwtm/Dise%C3%B1os+welcome/login/backgroundsignup.png) no-repeat fixed;
+	background-size: cover;
+}
+
+#bkgndedit{
+	width:100%;
+	height:100%;
+	background: url(https://s3-sa-east-1.amazonaws.com/cityfolkwtm/Dise%C3%B1os+welcome/login/backgroundedit.jpg) no-repeat fixed;
 	background-size: cover;
 }
 
 
-.rowsignin {
+
+#select{
+
+    color: black;
+}
+
+#rowsignin {
 	width:100%;
 	height:100%;
 	position: relative;
@@ -100,23 +123,21 @@ font-family: 'lato' ;
 	
 	width: 30%; 
 	height: auto;
-	float: right;
 	padding-top: 5%;
 	margin-left: 35%;
 	font-family: "Lato", sans-serinf;
 	color: white;
-	position: absolute;
+
 }
 
 #signinPage {
 	
 	width: 30%; 
 	height: auto;
-	float: right;
 	padding-top: 15%;
 	margin-left: 35%;
 	font-family: "Lato", sans-serinf;
 	color: white;
-	position: absolute;
+	
 }
 

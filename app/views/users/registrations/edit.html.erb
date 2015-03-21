@@ -1,22 +1,32 @@
-<h2>Información de Usuario <%= current_user.name %></h2>
+
+<body id="bkgndedit">
 <div class="container-fluid">
-  <div class="row">
+  <div class="row" id="fluidedit">
+    <h2>Información de Usuario <%= current_user.name %></h2>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
     <%= devise_error_messages! %>
       <div class="col-xs-12 col-sm-4 col-md-4">
          <div class="field"> 
             <%= f.label :name, "Nombre o NickName" %> <br />
-            <%= f.text_field :name, autofocus: true %>
-          </div>
+             <div id="select">
+            <%= f.text_field :name, autofocus: true%> 
+              </div>
+            </div>
           <div class="field">
             <%= f.label :email, "E-mail" %><br />
+             <div id="select">
             <%= f.email_field :email, autofocus: true %>
+          </div>
           </div>
 
           <%= f.label :sexo, "Sexo" %>
-          <%= f.select :sexo, ['Hombre', 'Mujer', 'Intersex'] %><br />
+          <div id="select">
+          <%= f.select :sexo, ['Hombre', 'Mujer', 'Intersex'] %>
+         </div><br />
           <%= f.label :tel, "Telefono" %><i>(Uso promocional e informativo)</i><br /> 
-          <%= f.telephone_field :tel %><br /> 
+           <div id="select">
+          <%= f.text_field :tel %><br />
+           </div> 
           <%= f.label :avatar, "Imagen de perfil"%>
           <%= f.file_field :avatar %><br />
            <%= f.label :background, "Fondo de perfil"%>
@@ -27,21 +37,34 @@
       <div class="col-xs-12 col-sm-4 col-md-4">
         <div class="field">
           <%= f.label :bibliography, "Una pequeña reseña sobre ti" %><br /> 
+           <div id="select">
           <%= f.text_field :bibliography %><br /> 
+           </div>
         </div>
         <div class="field">       
           <%= f.label :borndate,"Fecha de nacimiento" %><br /> 
-          <%= f.date_select :borndate %><br /> 
+           <div id="select">
+           <%= f.date_select :borndate,  start_year: 1920, use_month_numbers: true, prompt: { day: 'Día', month: 'Mes', year: 'Año' }, :order => [:day, :month, :year], selected: Date.today ,class:"form-control", placeholder:"Fecha de apertura o día del evento", autofocus: true %> 
+                           </div>
+         </div>
+         <div class="field">      
           <%= f.label :locationborn, "Ciudad de nacimiento" %><br /> 
-        </div>
-        <div class="field">
+          <div id="select">
+        
           <%= f.text_field :locationborn %><br /> 
-          <%= f.label :location, "Ciudad Actual" %><br /> 
+          </div>
+          
         </div>
 
         <div class="field">
+          <%= f.label :location, "Ciudad Actual" %><br /> 
+          <div id="select">
           <%= f.text_field :location %><br /> 
-          <%= f.label :website, "Tu website de contacto" %><br /><%= f.text_field :website %><br /> 
+        </div>
+          <%= f.label :website, "Tu website de contacto" %><br />
+         <div id="select">
+          <%= f.text_field :website %><br /> 
+        </div>
         </div>
       
         </div>
@@ -57,13 +80,17 @@
 
     <div class="field">
       <%= f.label :password_confirmation, "Repita la contraseña" %><br />
+      <div id="select">
       <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      </div>
     </div>
 
     <div class="field">
       <%= f.label :current_password %> <i>(Necesita su contraseña usual para salvar los cambios)</i><br />
+      <div id="select">
       <%= f.password_field :current_password, autocomplete: "off" %>
-      <div class="actions">
+      </div>
+      <div class="actions" id="select">
       <%= f.submit "Guardar cambios" %>
     
   <%= link_to "Atrás", :back %>
@@ -82,7 +109,7 @@
 <% end %>
 
 <%= yield %>
-
+</body>
 
 
   

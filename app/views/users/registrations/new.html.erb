@@ -3,13 +3,10 @@
 
 
     <body id="bkgndsignup">
-      <div id="rowsignup" class="container-fluid">
-        <div  class="row">
-          <div class="col-xs-12 col-sm-12 col-md-12  ">
-
-            
-              <div >
-                    <div id="signupPage" class="form-group">
+      <div  class="container-fluid">
+        <div  class="row" id="fluidsu">
+          <div class="col-xs-12 col-sm-12 col-md-12 form-group  " id="rowsignin">
+            <div id="signupPage">
                     
                         <h2> <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Registrate</h2> 
 
@@ -17,12 +14,12 @@
                           <%= devise_error_messages! %>
 
                           <div class="field"> 
-                            <%= f.label :name %> <br />
+                            <%= f.label :name, "Nombre o NickName" %> <br />
                             <%= f.text_field :name, class:"form-control", placeholder:"Nombre", autofocus: true %>
                           </div>
 
                           <div class="field">
-                            <%= f.label :email %><br />
+                            <%= f.label :email, "Email" %><br />
                             <%= f.email_field :email, class:"form-control", placeholder:"email", autofocus: true %>
                           </div>
 
@@ -30,17 +27,19 @@
                             <%= f.label :sexo %><br />
                          
 
-                          <%= f.select :sexo, options_for_select(["hombre", "mujer", "intersexual"]), class:"form-control", autofocus: true %><br />
+                          <div id="select"> <%= f.select :sexo, options_for_select(["Hombre", "Mujer", "Intersexual"]), class:"form-control", autofocus: true %> </div> <br /> 
                           </div>
                           
                           <div class="field">
-                            <%= f.label :borndate%><br />
-                            <%= f.date_select :borndate, class:"form-control", placeholder:"Fecha de apertura o día del evento", autofocus: true %> 
+                            <%= f.label :borndate, "Fecha de Nacimiento" %><br />
+                           <div id="select">
+                            <%= f.date_select :borndate,  start_year: 1920, use_month_numbers: true, prompt: { day: 'Día', month: 'Mes', year: 'Año' }, :order => [:day, :month, :year], selected: Date.today ,class:"form-control", placeholder:"Fecha de apertura o día del evento", autofocus: true %> 
+                           </div>
                           </div>
                           
 
                           <div class="field">
-                            <%= f.label :password %>
+                            <%= f.label :password, "contraseña"%>
                             <% if @validatable %>
                             <em>(<%= @minimum_password_length %> caracteres mínimos)</em>
                             <% end %><br />
@@ -48,7 +47,7 @@
                           </div>
 
                           <div class="field">
-                            <%= f.label :password_confirmation %><br />
+                            <%= f.label :password_confirmation, "Confirme su contraseña" %><br />
                             <%= f.password_field :password_confirmation, autocomplete: "off", class:"form-control", placeholder: "Repita la contraseña", autofocus: true %>
                           </div>
 
@@ -58,13 +57,11 @@
 
                         <% end %>
 
-                        <%= render "users/shared/links" %>
-                </div>                  
-             </div>
-       
+                        <%=  render "users/shared/links" %>
+            </div>                  
+          </div>
         </div>
       </div>
-  </div>
-    
-    </body>
+  
+  </body>
 
